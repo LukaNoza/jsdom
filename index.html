@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1).
+    <script>
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setButtonColor(button) {
+  var number = parseInt(button.textContent);
+  if (number % 2 === 0) {
+    button.style.backgroundColor = "green";
+  } else {
+    button.style.backgroundColor = "red";
+  }
+}
+
+var container = document.getElementById("button-container"); 
+for (var i = 0; i < 15; i++) {
+  var button = document.createElement("button");
+  var randomNumber = getRandomNumber(1, 100); 
+  button.textContent = randomNumber;
+  setButtonColor(button); 
+  container.appendChild(button);
+}
+
+
+    </script> -->
+
+    
+    <!-- 2).
+    <script>
+function isMultipleOfFive(number) {
+  return number % 5 === 0;
+}
+
+var container = document.getElementById("button-container"); 
+for (var i = 1; i <= 20; i++) {
+  var button = document.createElement("button");
+  button.textContent = i;
+  
+  if (isMultipleOfFive(i)) {
+    button.style.display = "none";
+  }
+  
+  container.appendChild(button);
+}
+
+    </script> -->
+
+    
+    <!-- 3).
+    <script>
+function getRandomClass() {
+  var classes = ["btn-primary", "btn-success", "btn-danger", "btn-dark", "btn-warning"];
+  var randomIndex = Math.floor(Math.random() * classes.length);
+  return classes[randomIndex];
+}
+
+var container = document.getElementById("button-container"); 
+for (var i = 0; i < 20; i++) {
+  var button = document.createElement("button");
+  button.classList.add(getRandomClass());
+  container.appendChild(button);
+}
+
+var buttons = document.getElementsByTagName("button");
+for (var j = 0; j < buttons.length; j++) {
+  var button = buttons[j];
+  if (button.classList.contains("btn-primary") || button.classList.contains("btn-danger")) {
+    button.style.display = "none";
+  }
+}
+
+    </script> -->
+</body>
+</html>
